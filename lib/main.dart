@@ -1,8 +1,12 @@
+import 'package:astroestelar/features/getx/bindings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: HomePage(),
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(GetMaterialApp(
+    initialBinding: DependenciesBinding(),
+    home: const HomePage(),
   ));
 }
 
@@ -17,26 +21,28 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: const Drawer(),
       appBar: AppBar(
         title: const Text("AstroEstelar",
             style: TextStyle(
                 fontSize: 28,
                 letterSpacing: 3,
                 fontWeight: FontWeight.bold,
-                color: Colors.white)),
+                color: Colors.white
+            ),
+        ),
         centerTitle: true,
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-              image: new AssetImage("images/background.jpeg"),
+              image: AssetImage("images/background.jpeg"),
               fit: BoxFit.cover),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.verified_user, color: Colors.white),
               trailing: Text("AstroEstelar",
                   style: TextStyle(
@@ -45,14 +51,14 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white)),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: SizedBox(
                       width: 500.00,
                       child: TextField(
@@ -79,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                     width: 200,
                     child: Card(
                       child: Row(
-                        children: [Text("Objetos deixados \n na lua \n pelo homem")],
+                        children: const [Text("Objetos deixados \n na lua \n pelo homem")],
                       ),
                     ),
                   ),
@@ -87,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                     width: 200,
                     child: Card(
                       child: Row(
-                        children: [Text("Primeiro \n sátelite \n feito"), Icon(Icons.abc)],
+                        children: const [Text("Primeiro \n sátelite \n feito"), Icon(Icons.abc)],
                       ),
                     ),
                   ),
@@ -95,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                     width: 200,
                     child: Card(
                       child: Row(
-                        children: [Text("Composição de \n de um boraco \n negro"), Icon(Icons.abc)],
+                        children: const [Text("Composição de \n de um boraco \n negro"), Icon(Icons.abc)],
                       ),
                     ),
                   )
