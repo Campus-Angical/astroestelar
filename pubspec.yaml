@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^3.0.1
+  flutter_svg: ^1.1.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -63,8 +64,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/background.jpeg
-    - images/fundo.jpg
-    - images/astro.jpg
+    - images/astronaut.png
+    - images/black_hole.png
+    - images/satelite.png
+    - images/marte.png
+    - images/saturn.png
+    - images/earth.jpg
+    - images/rocket.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
